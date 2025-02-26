@@ -3,10 +3,14 @@ import os
 from openai import OpenAI
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-
+api_key = os.getenv("OPENAI_API_KEY")
+if not api_key:
+    print("API Key not found in environment variables!")
+else:
+    print(f"API Key loaded: {api_key[:5]}...") 
 
 completion = client.chat.completions.create(
-    model="gpt-4o",
+    model="gpt-3.5-turbo",
     messages=[
         {"role": "system", "content": "You're a helpful assistant."},
         {
