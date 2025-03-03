@@ -10,7 +10,7 @@ else:
     print(f"API Key loaded: {api_key[:5]}...") 
 
 completion = client.chat.completions.create(
-    model="gpt-3.5-turbo",
+    model="gpt-4o",
     messages=[
         {"role": "system", "content": "You're a helpful assistant."},
         {
