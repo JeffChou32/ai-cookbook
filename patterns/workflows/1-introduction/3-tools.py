@@ -116,3 +116,4 @@ completion_2 = client.beta.chat.completions.parse(
 final_response = completion_2.choices[0].message.parsed
 final_response.temperature
 final_response.response
+print(final_response)
